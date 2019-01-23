@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const server = http.createServer(app);
 var port = process.env.PORT || 3000;
 
 app.use("/vendor", express.static("vendor"));
@@ -16,6 +15,6 @@ app.get("/", function(req, res) {
 });
 
 // app.set("port", process.env.PORT || 3000);
-server.listen(port, () => {
-  console.log("Listening on port", port);
+app.listen(port, () => {
+  console.log("Listening on port");
 });
