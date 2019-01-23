@@ -1,17 +1,18 @@
 {
   "title": "curriculum",
   "name": "bootstrap-curriculum",
-  "version": "5.0.2",
+  "version": "1.0.0",
   "description": "this is my personal curriculum",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
   "keywords": [
     "css",
     "sass",
     "html",
     "responsive"
   ],
-  "scripts": {
-    "start": "node app.js"
-  },
   "license": "MIT",
   "author": "Juanda agudelo",
   "contributors": [
