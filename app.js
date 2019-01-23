@@ -1,6 +1,7 @@
-var express = require("express");
-var path = require("path");
-var app = express();
+const express = require("express");
+const path = require("path");
+const app = express();
+const server = http.createServer(app);
 
 app.use("/vendor", express.static("vendor"));
 app.use("/css", express.static(__dirname + "/css"));
@@ -13,6 +14,7 @@ app.get("/", function(req, res) {
   });
 });
 
-app.listen(3000, function() {
-  console.log("CORRIENDO");
+app.set("port", process.env.PORT || 3000);
+server.listen(app.get("port"), () => {
+  console.log(`server on port ${app.get("port")}`);
 });
